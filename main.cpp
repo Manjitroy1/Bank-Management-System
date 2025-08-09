@@ -690,6 +690,9 @@ public:
             outFile << current->hasCheckbook << endl;
             outFile << current->accountType << endl;
 
+            outFile << current->accountType << '\n';
+            outFile << current->transactionHistory.size() << '\n';
+
             for (const string& transaction : current->transactionHistory)
             {
                 outFile << transaction << endl;
